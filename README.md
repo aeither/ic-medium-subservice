@@ -18,7 +18,7 @@ context.
   Rust.
 - The frontend canster uses Vite/React.
 - The ic-alloy fork: <https://github.com/kristoferlund/ic-alloy>
-- Live demo: <https://u4yi6-xiaaa-aaaap-aib2q-cai.icp0.io>
+- Live demo: <https://p63uc-maaaa-aaaag-atsfa-cai.icp0.io>
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url]
@@ -26,7 +26,7 @@ context.
 
 > [!TIP]
 >
-> Live demo: <https://u4yi6-xiaaa-aaaap-aib2q-cai.icp0.io>
+> Live demo: <https://p63uc-maaaa-aaaag-atsfa-cai.icp0.io>
 
 ![screenshot](media/screenshot.png)
 
