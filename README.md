@@ -123,10 +123,10 @@ dfx deploy
 	<tbody>
 		<tr>
             <td align="center">
-                <a href="https://github.com/armsves">
-                    <img src="https://avatars.githubusercontent.com/u/113925592?v=4" width="100;" alt="armsves"/>
+                <a href="https://github.com/aeither">
+                    <img src="https://avatars.githubusercontent.com/u/36173828?v=4" width="100;" alt="aeither"/>
                     <br />
-                    <sub><b>Armando Medina</b></sub>
+                    <sub><b>aeither</b></sub>
                 </a>
             </td>
 		</tr>
