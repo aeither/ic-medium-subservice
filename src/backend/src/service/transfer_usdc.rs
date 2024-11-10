@@ -1,6 +1,6 @@
+use ic_cdk_macros::{init, update};
 use std::cell::RefCell;
 use std::time::Duration;
-use ic_cdk_macros::{init, update};
 
 use alloy::{
     network::EthereumWallet,
@@ -44,7 +44,7 @@ sol!(
 /// (Alchemy, etc). For a fully decentralised deployment, one option is also to deploy a copy of
 /// the EVM RPC canister yourself on an app subnet with only 13 nodes and your own RPC API key.
 /// Perhaps 3 calls * 13 = 39 fits within the RPC call limits.
-/// 
+///
 ///     
 const N: Duration = Duration::from_secs(10);
 
@@ -72,9 +72,11 @@ async fn transfer_usdc() -> Result<String, String> {
     // Setup provider
     let wallet = EthereumWallet::from(signer);
     let rpc_service = get_rpc_service_sepolia();
-    let config = IcpConfig::new(rpc_service);
+    let config = IcpConfig::new(rpc_service)
+        .set_max_response_size(200_000)
+        .set_call_cycles(60_000_000_000);
     let provider = ProviderBuilder::new()
-        .with_gas_estimation()  
+        .with_gas_estimation()
         .wallet(wallet)
         .on_icp(config);
 
@@ -98,7 +100,7 @@ async fn transfer_usdc() -> Result<String, String> {
 
     let from_address = address!("87f095c9313c8a884dd8f78aa7439fc0cfd31e81");
     let to_address = address!("9567D433240681653fb4DD3E05e08D60fe54210d");
-    let value : U256 = U256::from(10000); //100000
+    let value: U256 = U256::from(10000); //100000
 
     match contract
         .transferFrom(from_address, to_address, value)
